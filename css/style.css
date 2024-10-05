@@ -1,0 +1,144 @@
+/* Common
+--------------------------------------------------------------------------------------------------------*/
+.text-center {
+  text-align: centerz;
+}
+
+.wrapper {
+  padding: 20px;
+}
+
+header h1 {
+  font-size: 40px;
+  line-height: 48px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  position: relative;
+  margin-bottom: 20px;
+  max-width: 241px;
+}
+
+.form-group .form-control {
+  display: block;
+  width: 100%;
+  height: 38px;
+  padding: 6px 54px 6px 12px;
+  border: 1px solid rgb(206, 212, 218);
+  border-radius: 4px;
+  transition: all 200ms ease-in-out;
+}
+
+.form-group .shortcut-key {
+  position: absolute;
+  top: calc(50% - 12px);
+  right: 8px;
+  font-size: 12px;
+  border: 1px solid rgb(222, 226, 230);
+  border-radius: 2px;
+  height: 24px;
+  padding-inline: 4px;
+}
+
+.form-group .form-control:focus,
+.form-group .form-control:active {
+  border-color: #7952b3;
+  box-shadow: 0 0 0 3px rgb(121 82 179 / 25%);
+}
+
+.form-group .form-control:disabled {
+  background: rgb(233, 236, 239);
+}
+
+/* Table CSS */
+table {
+  width: 100%;
+  border-collapse: separate;
+}
+
+th,
+td {
+  padding: 8px;
+  border-radius: 2px;
+  border-bottom: 1px solid rgb(222, 226, 230);
+  vertical-align: middle;
+  text-align: left;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+th {
+  font-weight: 700;
+  border-bottom-width: 2px;
+}
+
+td>img {
+  display: inline-block;
+  vertical-align: middle;
+  width: 36px;
+  height: 24px;
+
+  object-fit: contain;
+}
+
+/* Table Pagination */
+.pagination-wrpper {
+  font-size: 14px;
+  line-height: 20px;
+  padding: 20px 0;
+}
+
+.btn {
+  border: 1px solid transparent;
+  background: none;
+  box-shadow: none;
+  padding: 8px;
+  transition: all 200ms ease-in-out;
+}
+
+#pagination-container {
+  display: inline-flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.btn-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.btn-page:disabled {
+  pointer-events: none;
+}
+
+.btn-page:hover,
+.page-link.active {
+  background: #7952b3;
+  color: #FFFFFF;
+}
+
+.page-number-wrap {
+  display: inline-flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.limit-input .form-control {
+  display: inline-block;
+  max-width: 48px;
+  padding: 8px;
+}
+
+
+/* Max Width Media Queries
+--------------------------------------------------------------------------------------------------------*/
+@media (max-width: 1199px) {}

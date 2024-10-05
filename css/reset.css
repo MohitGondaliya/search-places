@@ -1,0 +1,345 @@
+@charset "utf-8";
+
+/*
+------------------------------------------------------------
+Project Name : Search Places;
+------------------------------------------------------------
+*/
+
+/* Reset 
+--------------------------------------------------------------------------------------------------------*/
+
+/* 
+http://meyerweb.com/eric/tools/css/reset/
+v2.0 | 20110126
+License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+}
+
+ol,
+ul {
+	list-style: none;
+}
+
+blockquote,
+q {
+	quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* General 
+--------------------------------------------------------------------------------------------------------*/
+.window-resizing *,
+body:not(.page-loaded) *:not(.aos-animate) {
+	transition: none !important;
+}
+
+a {
+	transition: all 0.3s;
+}
+
+html,
+body {
+	min-width: 300px;
+	min-height: 100vh;
+}
+
+body {
+	font-size: 16px;
+	line-height: 22px;
+	color: rgb(33, 37, 41);
+	Font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+	-ms-overflow-style: scrollbar;
+	-webkit-font-smoothing: subpixel-antialiased;
+}
+
+.wrapper {
+	min-height: 100vh;
+}
+
+a {
+	color: #000;
+	text-decoration: none;
+	outline: none;
+}
+
+a:hover {
+	color: #999;
+	text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	line-height: 1.2em;
+}
+
+h1 span,
+h2 span,
+h3 span,
+h4 span,
+h5 span,
+h6 span {
+	display: block;
+}
+
+h1 {
+	font-size: 48px;
+	line-height: 56px;
+}
+
+h2 {
+	font-size: 42px;
+	line-height: 50px;
+}
+
+h3 {
+	font-size: 36px;
+	line-height: 44px;
+}
+
+h4 {
+	font-size: 28px;
+	line-height: 36px;
+}
+
+h5 {
+	font-size: 24px;
+	line-height: 30px;
+}
+
+h6 {
+	font-size: 20px;
+	line-height: 26px;
+}
+
+.body1 {
+	font-size: 16px;
+	line-height: 24px;
+	font-weight: 400;
+}
+
+.body2 {
+	font-size: 14px;
+	line-height: 20px;
+	font-weight: 400;
+}
+
+.subtitle1 {
+	font-size: 18px;
+	line-height: 24px;
+	font-weight: 600;
+}
+
+.subtitle1 {
+	font-size: 16px;
+	line-height: 24px;
+	font-weight: 600;
+}
+
+.caption {
+	font-size: 12px;
+	line-height: 16px;
+}
+
+.overline {
+	font-size: 10px;
+	line-height: 16px;
+}
+
+input[type=text],
+input[type=email],
+input[type=password],
+textarea {
+	-webkit-appearance: none;
+	appearance: none;
+}
+
+::-webkit-input-placeholder {
+	color: #000;
+}
+
+::-moz-placeholder {
+	color: #000;
+}
+
+:-ms-input-placeholder {
+	color: #000;
+}
+
+:-moz-placeholder {
+	color: #000;
+}
+
+::-moz-focus-inner {
+	border: 0;
+}
+
+select:-moz-focusring {
+	color: transparent;
+	text-shadow: 0 0 0 #000;
+}
+
+option:not(:checked) {
+	color: #333333;
+}
+
+::-webkit-scrollbar {
+	width: 8px !important;
+	height: 8px !important;
+	background: #ffffff !important;
+}
+
+::-webkit-scrollbar-thumb {
+	border: 0 !important;
+	background-color: #c0c0c0 !important;
+	border-radius: 12px !important;
+}
+
+.form-group input.form-control:-webkit-autofill,
+.form-group input.form-control:-webkit-autofill:hover,
+.form-group input.form-control:-webkit-autofill:focus,
+.form-group input.form-control:-webkit-autofill:active {
+	-webkit-box-shadow: 0 0 0 30px rgb(255 255 255 / 25%) inset !important;
+	-webkit-text-fill-color: #212121;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+	-webkit-box-shadow: 0 0 0 30px #FFFFFF inset !important;
+	-webkit-text-fill-color: #333333;
+}
+
+.form-group input.form-control:-webkit-autofill~label,
+.form-group input.form-control:-webkit-autofill:hover~label,
+.form-group input.form-control:-webkit-autofill:focus~label,
+.form-group input.form-control:-webkit-autofill:active~label {
+	z-index: 1;
+}
+
+* {
+	box-sizing: border-box;
+}
